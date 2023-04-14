@@ -326,7 +326,7 @@ footer {
 }
 
 .footer__logo {
-  width: 30%;
+  width: 45%;
   height: 15%;
   filter: invert(100%);
 }
@@ -411,12 +411,12 @@ footer {
   .footer__logo {
     width: 12%;
   }
-  .fa-heart--like {
-    opacity: 1;
-    color: transparent;
+  .restaurant-selection__card__heart--red .fa-heart--like {
+    opacity: 1 !important;
+    color: transparent !important;
   }
-  .fa-heart--like:hover {
-    color: #9356DC;
+  .restaurant-selection__card__heart--red  .fa-heart--like:hover {
+    color: #9356DC !important;
   }
 }
 @media screen and (min-width: 767px) {
@@ -434,6 +434,6 @@ footer {
     width: auto;
   }
   .footer__logo {
-    width: 20%;
+    width: 12%;
   }
 }/*# sourceMappingURL=style.css.map */
