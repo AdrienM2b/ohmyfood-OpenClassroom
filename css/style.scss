@@ -4,6 +4,7 @@
 }
 a{
     text-decoration: none;
+    color: black;
 }
 a:visited{
     color: black;
@@ -12,20 +13,35 @@ ul{
     list-style-type: none;
 }
 
-p, a{
+h4, p, a{
     font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3{
     font-family: 'Shrikhand', cursive;
 }
+// declaration des couleurs 
+$lightpurple : #9356DC;
+$lightpink: #FF79DA;
+$pastelGreen: #99E2D0; 
+$Gray: #e6e6e6;
+$lightGrey: #f6f6f6;
+$linearPink: linear-gradient(#FF79DA, #9356DC);
+$lighterPink: #ff9fe4;
+$lighterPurple: #a071da;
+$linearLighter: linear-gradient(#ff9fe4, #a071da);
+
+@mixin box-shadow-grey{
+  box-shadow: 0px 8px 12px -10px gray;
+}
+
 
 
 /* animation */
 
 .loader{
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -53,7 +69,7 @@ h1, h2, h3{
         font-family: 'Shrikhand';
         text-transform: uppercase;
         position: absolute;
-        color: #9356DC;
+        color: $lightpurple;
         visibility: hidden;
         animation: up 1.3s 0s 1;
     }
@@ -62,7 +78,7 @@ h1, h2, h3{
         font-family: 'Shrikhand';
         text-transform: uppercase;
         position: absolute;
-        color: #FF79DA;
+        color: $lightpink;
         visibility: hidden;
         animation: up 1.3s 1.3s 1;
     }
@@ -70,7 +86,7 @@ h1, h2, h3{
         font-size: 15px;
         font-family: 'Shrikhand';
         text-transform: uppercase;
-        color: #99E2D0;
+        color: $pastelGreen;
         position: absolute;
         visibility: hidden;
         animation: up 1.3s 2.6s 1;
@@ -111,9 +127,10 @@ h1, h2, h3{
 /* header */
 
 header{
-    width: 100vw;
+    position: relative;
+    width: 100%;
     height: 10vh;
-    box-shadow: 0px -6px 11px 0px gray;
+    @include box-shadow-grey;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,12 +141,12 @@ header{
 }
 
 .location__container{
-    width: 100vw;
+    width: 100%;
     height: 15vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #8080802b;
+    background-color: $Gray;
     .location__icon{
         width: 5%;
     }
@@ -141,9 +158,9 @@ header{
 }
 
 .explore-menu__container{
-    width: 100vw;
+    width: 100%;
     height: 45vh;
-    background-color: #8080800d;
+    background-color: $lightGrey;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -160,10 +177,15 @@ header{
             text-align: center
         }
     .explore-menu__btn{
-        background: linear-gradient(#FF79DA, #9356DC);
+        background-image: $linearPink;
         width: 56%;
     }
 }
+.explore-menu__btn:hover{
+    background-image: $linearLighter;
+}
+
+
 .btn--rounded{
     padding: 4% 4%;
     border-radius: 20px;
@@ -172,7 +194,7 @@ header{
 }
 
 .fonction__container{
-    width: 100vw;
+    width: 100%;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -190,14 +212,14 @@ header{
             width: 80%;
             height: 50%;
             border-radius: 20px;
-            background-color: #8080800d;
-            box-shadow: 0px 10px 10px -9px lightgrey;
+            background-color: $lightGrey;
+            @include box-shadow-grey;
             display: flex;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             .fonction__item__number{
-                background-color: #9356DC;
+                background-color: $lightpurple;
                 color: white;
                 font-size: 12px;
                 width: 9%;
@@ -217,10 +239,10 @@ header{
                 align-items: center;
                 .fonction__item__icon{
                     margin-right: 10px;
-                    color: #828282;
+                    color: $Gray;
                 }
                 .fonction__item__icon--pink{
-                    color: #9356DC;
+                    color: $lightpurple;
                 }
             }
         }
@@ -235,7 +257,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #8080800d;
+    background-color: $lightGrey;
     .restaurant-selection__heading{
         margin: 0% 7%;
     }
@@ -250,8 +272,8 @@ header{
         position: relative;
         padding: 2% 3%;
         font-size: 12px;
-        color: lightgreen;
-        background-color: green;
+        color: green;
+        background-color: $pastelGreen;
         margin: 0% 0% -12% 60%;
         border-radius: 2px;
     }
@@ -261,7 +283,7 @@ header{
         width: 90%;
         height: 30vh;
         border-radius: 20px;
-        box-shadow: 0px 10px 10px -9px lightgrey;
+        @include box-shadow-grey;
             &__img{
                 width: 100%;
                 height: 70%;
@@ -287,7 +309,7 @@ header{
         width: 8%;
         height: 40%;
         font-size: 23px;
-        color: #828282;
+        color: $Gray;
         display: flex;
     }
 }
@@ -319,7 +341,7 @@ header{
     }
     100%{
       transform: scale(1);
-      color: #9356DC;
+      color: $lightpurple;
       opacity: 1;
     }
   }
@@ -328,7 +350,7 @@ header{
 
 
 footer{
-    width: 92vw;
+    width: 92%;
     height: 25vh;
     padding: 4%;
     display: flex;
@@ -338,7 +360,7 @@ footer{
 }
 
 .footer__logo{
-    width: 30%;
+    width: 45%;
     height: 15%;
     filter: invert(100%)
 }
@@ -428,8 +450,16 @@ footer{
     }
 
     .footer__logo {
-        width: 15%;
+        width: 12%;
     }
+
+    .fa-heart--like{
+        opacity: 1 !important;
+        color: transparent !important;
+      }
+      .fa-heart--like:hover{
+        color: $lightpurple !important;
+      }
 }
 
 // media queries pour tablette
@@ -449,6 +479,6 @@ footer{
     }
 
     .footer__logo {
-        width: 20%;
+        width: 12%;
     }
 }

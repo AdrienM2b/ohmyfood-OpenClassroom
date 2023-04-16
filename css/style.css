@@ -5,6 +5,7 @@
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 a:visited {
@@ -15,7 +16,7 @@ ul {
   list-style-type: none;
 }
 
-p, a {
+h4, p, a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -26,7 +27,7 @@ h1, h2, h3 {
 /* animation */
 .loader {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -105,9 +106,10 @@ h1, h2, h3 {
 }
 /* header */
 header {
-  width: 100vw;
+  position: relative;
+  width: 100%;
   height: 10vh;
-  box-shadow: 0px -6px 11px 0px gray;
+  box-shadow: 0px 8px 12px -10px gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,12 +121,12 @@ header {
 }
 
 .location__container {
-  width: 100vw;
+  width: 100%;
   height: 15vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(128, 128, 128, 0.168627451);
+  background-color: #e6e6e6;
 }
 .location__container .location__icon {
   width: 5%;
@@ -136,9 +138,9 @@ header {
 }
 
 .explore-menu__container {
-  width: 100vw;
+  width: 100%;
   height: 45vh;
-  background-color: rgba(128, 128, 128, 0.0509803922);
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -156,8 +158,12 @@ header {
   text-align: center;
 }
 .explore-menu__container .explore-menu__btn {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
   width: 56%;
+}
+
+.explore-menu__btn:hover {
+  background-image: linear-gradient(#ff9fe4, #a071da);
 }
 
 .btn--rounded {
@@ -168,7 +174,7 @@ header {
 }
 
 .fonction__container {
-  width: 100vw;
+  width: 100%;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -188,8 +194,8 @@ header {
   width: 80%;
   height: 50%;
   border-radius: 20px;
-  background-color: rgba(128, 128, 128, 0.0509803922);
-  box-shadow: 0px 10px 10px -9px lightgrey;
+  background-color: #f6f6f6;
+  box-shadow: 0px 8px 12px -10px gray;
   display: flex;
   display: flex;
   justify-content: space-evenly;
@@ -217,7 +223,7 @@ header {
 }
 .fonction__container .fonction__item .fonction__item__block .fonction__item__content .fonction__item__icon {
   margin-right: 10px;
-  color: #828282;
+  color: #e6e6e6;
 }
 .fonction__container .fonction__item .fonction__item__block .fonction__item__content .fonction__item__icon--pink {
   color: #9356DC;
@@ -231,7 +237,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: rgba(128, 128, 128, 0.0509803922);
+  background-color: #f6f6f6;
 }
 .restaurant-selection__feed .restaurant-selection__heading {
   margin: 0% 7%;
@@ -247,8 +253,8 @@ header {
   position: relative;
   padding: 2% 3%;
   font-size: 12px;
-  color: lightgreen;
-  background-color: green;
+  color: green;
+  background-color: #99E2D0;
   margin: 0% 0% -12% 60%;
   border-radius: 2px;
 }
@@ -258,7 +264,7 @@ header {
   width: 90%;
   height: 30vh;
   border-radius: 20px;
-  box-shadow: 0px 10px 10px -9px lightgrey;
+  box-shadow: 0px 8px 12px -10px gray;
 }
 .restaurant-selection__card__content__img {
   width: 100%;
@@ -282,7 +288,7 @@ header {
   width: 8%;
   height: 40%;
   font-size: 23px;
-  color: #828282;
+  color: #e6e6e6;
   display: flex;
 }
 
@@ -316,7 +322,7 @@ header {
 }
 /* animation like */
 footer {
-  width: 92vw;
+  width: 92%;
   height: 25vh;
   padding: 4%;
   display: flex;
@@ -411,11 +417,11 @@ footer {
   .footer__logo {
     width: 12%;
   }
-  .restaurant-selection__card__heart--red .fa-heart--like {
+  .fa-heart--like {
     opacity: 1 !important;
     color: transparent !important;
   }
-  .restaurant-selection__card__heart--red  .fa-heart--like:hover {
+  .fa-heart--like:hover {
     color: #9356DC !important;
   }
 }

@@ -5,6 +5,7 @@
 
 a {
   text-decoration: none;
+  color: #2a2a2a;
 }
 
 a:visited {
@@ -24,11 +25,11 @@ h1, h2 {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   height: 10vh;
-  box-shadow: 0px -6px 11px 0px gray;
   display: grid;
   grid-template-columns: 10% 90%;
+  box-shadow: 0px 8px 12px -10px gray;
   align-items: center;
   text-align: center;
 }
@@ -41,7 +42,7 @@ header {
 }
 
 .main__img {
-  width: 100vw;
+  width: 100%;
   height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
@@ -51,8 +52,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 150vh;
-  width: 100vw;
+  width: 100%;
   border-radius: 20px;
   margin-top: -30px;
   background-color: #f6f6f6;
@@ -60,20 +60,26 @@ header {
   position: relative;
 }
 .menu__container .heading__container {
-  width: 90vw;
+  width: 90%;
   padding: 4%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.menu__container--taller {
+  height: 150vh;
+}
+
 .list__container {
-  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
   animation: 4s fadeIn;
+}
+.list__container .list__title {
+  margin-bottom: 3%;
 }
 .list__container .list__title::after {
   content: "";
@@ -86,7 +92,9 @@ header {
 .list__menu__container {
   width: 90vw;
   height: 10vh;
-  background-color: lightgrey;
+  margin-bottom: 3%;
+  background-color: white;
+  box-shadow: 0px 8px 12px -10px gray;
   border-radius: 20px;
   overflow: hidden;
   opacity: 1;
@@ -158,11 +166,14 @@ header {
   width: 50vw;
   height: 8vh;
   border-radius: 40px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
   font-size: 18px;
   border: none;
   margin: 6% auto;
+}
+.order:hover {
+  background-image: linear-gradient(#ff9fe4, #a071da);
 }
 
 .heading__container .fa-heart {
@@ -222,7 +233,7 @@ header {
 }
 /* animation fadeIn vers le haut */
 footer {
-  width: 92vw;
+  width: 92%;
   height: 25vh;
   padding: 4%;
   display: flex;
@@ -232,7 +243,7 @@ footer {
 }
 
 .footer__logo {
-  width: 30%;
+  width: 45%;
   height: 15%;
   filter: invert(100%);
 }
@@ -260,20 +271,14 @@ footer {
   .main__img {
     height: 45vh;
   }
-  .menu__container {
-    height: 200vh;
-  }
-  .list__container {
-    height: 50vh;
-  }
   .footer__logo {
     width: 12%;
   }
   .fa-heart--like {
-    opacity: 1;
-    color: transparent;
+    opacity: 1 !important;
+    color: transparent !important;
   }
   .fa-heart--like:hover {
-    color: #9356DC;
+    color: #9356DC !important;
   }
 }/*# sourceMappingURL=menus.css.map */
